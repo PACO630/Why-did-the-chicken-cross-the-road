@@ -1736,6 +1736,49 @@ IG：chi0924_2020
 `;
 
 
+
+
+const roleGroupContent = `
+<div class="chatlog">
+
+<div class="chatlog__message-group searchable-message"><div id=chatlog__message-container-1054035137383378965 class="chatlog__message-container searchable-message" data-message-id=1054035137383378965><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src=dbb76546ab9384a5fbda754b9e490d1b-bce6d97cbe3cd2c6.png alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(146,224,172) title=Atlas#2867 data-user-id=338222603829510164>Atlas</span> <span class=chatlog__author-tag>BOT</span> <span class=chatlog__timestamp title="Sunday, December 18, 2022 10:59 PM"><a href=#chatlog__message-container-1054035137383378965>12/18/2022 10:59 PM</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>歡迎來到遊戲身分組! <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="emoji_10"
+    title="emoji_10"
+    src="1049507782417719407-487fda28de31fad6.gif">
+
+點擊下方的emoji選擇你們所需的身分組吧!
+讓大家能夠更快的找到你~~
+
+----原神----<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="emoji_13"
+    title="emoji_13"
+    src="1054028088830349322-2b4fa2713693d4bc.png">
+----Apex----<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="emoji_14"
+    title="emoji_14"
+    src="1054030694109675631-b11dde1989a25870.png">
+----VALORANT----<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="emoji_15"
+    title="emoji_15"
+    src="1054030907012550706-449df3070def63f4.png">
+----Minecraft----<img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="emoji_16"
+    title="emoji_16"
+    src="1054031091037642792-9f93f445e7840196.gif"></span> <span class=chatlog__edited-timestamp title="Sunday, December 18, 2022 11:06 PM">(edited)</span></div><div class=chatlog__reactions><div class=chatlog__reaction title=emoji_13><img class="chatlog__emoji chatlog__emoji--small" alt=emoji_13 src=1054028088830349322-2b4fa2713693d4bc.png loading=lazy> <span class=chatlog__reaction-count>13</span></div><div class=chatlog__reaction title=emoji_14><img class="chatlog__emoji chatlog__emoji--small" alt=emoji_14 src=1054030694109675631-b11dde1989a25870.png loading=lazy> <span class=chatlog__reaction-count>19</span></div><div class=chatlog__reaction title=emoji_15><img class="chatlog__emoji chatlog__emoji--small" alt=emoji_15 src=1054030907012550706-449df3070def63f4.png loading=lazy> <span class=chatlog__reaction-count>23</span></div><div class=chatlog__reaction title=emoji_16><img class="chatlog__emoji chatlog__emoji--small" alt=emoji_16 src=1054031091037642792-9f93f445e7840196.gif loading=lazy> <span class=chatlog__reaction-count>29</span></div></div></div></div></div></div>
+
+</div>
+`;
+
 function getSearchableItems(){
   const selectors = ['.ann-group', '.message', '.chatlog__message-container', '.chatlog__message-group'];
   const nodes = [];
@@ -1872,6 +1915,9 @@ function applyChannelContent(name){
     messages.classList.add('discord-page');
   }else if(name === '自介-可丟可不丟'){
     messages.innerHTML = selfIntroContent;
+    messages.classList.add('discord-page');
+  }else if(name === '身分組'){
+    messages.innerHTML = roleGroupContent;
     messages.classList.add('discord-page');
   }else{
     messages.innerHTML = defaultChannelContent(name);
